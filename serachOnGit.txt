@@ -1,0 +1,9 @@
+always serach according to stars 
+if you want to search a repo use this
+
+    react stars :>1000  //only show repos having stars greater then 1000
+    or 
+    react stars:10..50  // only show thosee repos having stars btwn 10 to 50
+
+    or 
+    react NOT "hello world" //exculdes those repos having this
