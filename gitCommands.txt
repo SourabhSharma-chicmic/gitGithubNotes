@@ -1,0 +1,78 @@
+git commiands
+
+ABOUT GIT ->
+1. git is tool for version control
+2. github is website use for collaborative code and version control also . here the all code is saved in repo
+
+1. step install git from atlassians git insatlation guide
+2. create an account in github create repostiory
+3. now open vs code and clone the repo using gitbash
+  aand command is	
+	git clone "linkofrepo"
+
+4. now do the changes then use below command to add all changes to tracker of git
+	git add . 
+5. now use commit to save
+	git commit -m "title" -m "description"
+
+6. if all is good then push to github 
+	git push origin master 
+
+thats alll..........................................
+
+_________________branches
+
+now you have working project and you wana do expremiental things so just create a branch so that it doent effect the working project once this expreiment is succesfull then merger this branch by pull request .
+
+1. to create branch 
+	git checkout -b branchName
+
+2. to chek all branches use 
+	git branch
+
+3. to swtich between branches use 
+	git checkout branchName
+
+4. to delte branch use 
+	git branch -d branchName
+
+5. to save in barnch first follow steps
+	git add .
+	git commit -m "title" -m "descrption"
+	git push origin CurrentbranchName
+
+6. now on github use  create pull request , them merge reques. all branch data will merge to your working branch i.e master
+
+
+7. all merger call will not reflect to your master after pull and merger on github we also need  to pull on our loacl machine so use
+
+	git pull origin master.
+
+NOTE to check the diffence in currrent brach and master we use 
+	git diff 
+
+
+
+________________________________________confilctss
+(multiple baranches may work on same files so let suppose i writen code on second line other also try to written and commiting but when we merge all branches with master this will create conficts so for this we have to manage as mention beloow)
+
+to check diffrence btween two branches
+
+	git diff OtherBranchName 
+	 (current is automaticly picke just give second branch whose code we want to compare)
+
+	then try this 
+		git merge branchName  
+
+here conflict will occure if in both files we are trying to written we have to solve manualty by setting code here.
+
+  in collaborative coding ( alwys use git merge branchName after sometime so that you can get less conflict and will carry lates code in your braches)
+
+
+______________---how to undo commits if we did wrong
+
+git reset HEAD~1  (HEAD refers to last commits 1 means last 1 commit undo krdoe)
+
+git reset --hard "code"  (to get code of commit we want to undo just do git log  ) and copy that code of commit.
+
+	

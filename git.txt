@@ -1,0 +1,140 @@
+____________________credentialss 
+Sourabh@123456789 (pass)
+SourabhSharma-chicmic (username)
+email id : sourabhsharma.chicmic@gmail.com
+
+_____________steps for setup github 
+	git is tool for version control(track the changes made in project) and github is a website where we upload data or project etc
+
+a . create an account in github
+b. create a repo with suitable name .
+b . downlad git into machine form attalassians guide for git install.
+c . select git bash in last steps have radio button for hint where to select
+
+now open your vs code and open any emty folder if new fiels to create and just clone project created in git hub by coping the link given in left side or we can also downlad  zip  file .
+
+__________________________________________________________
+
+1. git is a tool for version control
+2. github is a website where we upload our code or it is a respository
+
+Git comoonads
+1. clone -> if we dont have a website on machine but it is present in github we use clone
+2. add -> used to track changes
+3. commit ->use to save files in git in local machine
+4. push -> after commiting when we want to upload it on github /respository we use push
+
+5.pull-> download changes in our loacl machine using pull
+
+
+------------
+install git from  atlassians and select at last bash option radio button .
+
+____________-Slect Bash for git commands
+open vscode now open any folder now to clone a project from github slect bash from left side or getbash on the  place of terminal by clickin on+ button
+
+________________git clone "link form git of project"
+now write git clone  "link copied from github for project"  and press enter
+now cd and folder that is cloned comeinside this folder to work using cd ProjectThatisCloned
+
+____ ls -la or la
+to check we are in use ls -la in window and in mac la is enough or -la and press enter
+
+________git status
+to chek older commits use git status and press enter (this tells if any file is modifed or need to commit in github)
+	ex if we add a new file in our clonedProject inlocal machine and then if we type git status 
+
+	it will show untrackef files for new filled added  means git doesnt know about this file yet
+
+_____________git add .(period) or filename.exetension
+git add . // it will tell git to track all the files of cloned project those files that were present and those who are created now .it will track all now. 
+
+git add filename.extension //by this way we can add a particular file for tracking by git
+
+git add just makes untrakced file(those who are unkown to git) to tracked files (track changes)
+
+___________________________git commit -m "title of changes done" -m "description of changes done"
+
+git commit -m "added index.html"  -m "add a new file becuase i need this" and press enter 
+
+// commit saves the changes maded in project in local machine , here -m is message first -m is for giving title what we are commiting and second -m is descriptiion meand in detail what we did in this commit
+
+
+NOTE : commit only make changes in local machine for making these changes live in github we use push
+
+_______git push  (changes made in repo on github by this command)
+
+first git init 
+then  
+
+
+if manualy created then send to github
+git remote add origin "link" then enter
+
+git remote -v to check 
+
+
+now git push origin master
+
+
+
+
+for push we need to genrate ssh keys to connect with github and to ensure that this is our account
+type 
+ssh-keygen -t rsa  -b 4096 -C "sourabhsharma.chicmic@gmail.com" and press enter
+then give name of file and enter ->testkey or sshkey or yourchoice name
+then enter two times now file is created in your folder  now 
+
+type in bash -> cat testkey.pub and press enter 
+
+now copy this all text displayed after entreing (start with ssh ras sometihning text  and end with your email)
+
+go to github , click on left top arrow where profile pic shown uske sath go to setting then go to ssh keys
+add a new key name it of your choice then confirm password and done.
+
+
+_________________________________________________git branch
+to check branches
+
+git branch and press enter   
+
+_________to change branch and also create at that time  use->  git checkout -b barnchname
+
+git checkout -b branchname 
+
+____________to swichh to othher branche
+
+git checkout branchName 
+
+if you dont know how many branches you have simpley use -> git branches
+
+do the code if it is ok now just git add .
+git commit -m "title"
+
+git push -u origin current branch name in which we are working
+
+now if we know featurs is comple we can pull reques (mtlb apa eh changes master vich save kr skde so got to online and ute api ariya hou pull request just do that add descriptionand pull button ya jo v hai button green color vich create pull request button. and done.
+
+at last merge pull request
+
+sab hojega merger github te 
+
+butt.....loacl maschine te najar nhi aoga odeli type
+
+________________________git pull origin master
+this way on loacl machine we can see merrging results that we done on github.
+
+summary for branch
+create branch using git chekcout -b brnachname
+to check braches useing git branch
+to swith branches use git checkout  brachname
+
+make changes in files then use git add . then use git commit -m "titlt" then use git push origin current brnachname  then go to github . make pull request then click on merge requst data is megerd on github but not refflect to loacl machine
+
+so here in local machine come to master branch and use git pull origin master .
+
+
+________________delter brancht use git branch -d nameofbranch 
+
+___________git diff (check diffence mtlb new kya add kiya hai before commiting in branch)
+

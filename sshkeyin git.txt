@@ -1,0 +1,36 @@
+we need to follow all steps (3  point is optional thats only chekc kya exits krti hai pehle koi")
+
+___________________________genrate ssh key ___________________
+1. type in git bash
+ssh-keygen -t rsa -b 4096 -C "emailofgit" 
+after enter it will ask some question just press enter no neeed to enter details here.
+
+2. now key will be gerneated you can se 
+_____________chekc alredy  genrated ssh keys _____________
+3. to check alredy availbell maed keys type
+ ls -al ~/.ssh 
+
+___________________add key  to ssh agent ______
+now we want to add this key in ssh agent so firest make sure ssh agent is working or not for that type command in 4th point.....
+4. now make sure ssh agent is running or not by follwing command
+
+ eval $(ssh-agent -s)
+
+5. now add in agent 
+ ssh-add  ~/.ssh/id_rsa         (id_rsa is name of file)
+
+__________add key to github____
+6. go to key just see in git bash where you created like by defautl it is in users 91769 go ther and find .ssh folder and you will find id_rsa and id_rsa_pub
+
+7. open id_rsa_pub and open in any editor and copy the entrie key and go to github
+click on progil ke sath caret symbol and go to settings and click on ssh and gpg keys
+
+8. add new key give title and paste key in key section and click on Add Ssh key. thats all...
+
+9. now to check all is settled or not go to gitbash and 
+type
+	ssh -T git@github.com
+
+enter yes when asked . 
+
+_______________________END_______
